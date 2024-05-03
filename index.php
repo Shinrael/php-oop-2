@@ -3,8 +3,11 @@
 require_once __DIR__ . '/Model/Products.php';
 require_once __DIR__ . '/Model/Categories.php';
 
-
-
+$dogAliments = new Products(1, 'Umido Cane', 1.20, './img/cibocani.webp', 'C', 'Cibo per i nostri amici cani');
+$catAliments = new Products(2, 'Umido Gatto', 1.10, './img/cibogatti.webp', 'G', 'Cibo per i nostri amici gatti');
+$products = [$dogAliments, $catAliments];
+var_dump($dogAliments);
+var_dump($catAliments);
 
 ?>
 
@@ -20,7 +23,22 @@ require_once __DIR__ . '/Model/Categories.php';
 </head>
 <body>
   
-<h1>Ciao</h1>
+<div class="container text-center ">
+  <h1>Shop Animale</h1>
+  <div class="card-container d-flex mt-5"> 
+
+    <?php foreach($products as $product):  ?>
+    <div class="card mx-3" style="width: 18rem;">
+      <img src="<?php echo $product->image ?>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h2><?php echo $product->name ?></h2>
+        <p class="card-text"><?php echo $product->getInfo() ?></p>
+      </div>
+    </div>
+    <?php  endforeach ?>  
+
+  </div>
+</div>
 
 
 <script src="js/script.js"></script>
