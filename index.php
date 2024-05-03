@@ -3,6 +3,9 @@
 require_once __DIR__ . '/Model/Products.php';
 require_once __DIR__ . '/Model/Categories.php';
 
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +20,7 @@ require_once __DIR__ . '/Model/Categories.php';
 </head>
 <body>
   
-
+<h1>Ciao</h1>
 
 
 <script src="js/script.js"></script>
