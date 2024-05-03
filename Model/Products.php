@@ -2,17 +2,21 @@
 
 class Products {
 
+  public $id;
   public $name;
   public $price;
-  public $category;
-
-  public function __construct(string $_name, float $_price, string $_category){
+  
+  public function __construct(string $_id, string $_name, float $_price){
     
+    $this->id = $_id;
     $this->name = $_name;
     $this->price = $_price;
-    $this->category = $_category;
-
+    
   }
+
+  public function getId() {
+    return $this->id;
+  } 
 
   public function getName() {
     return $this->name;
@@ -21,9 +25,5 @@ class Products {
   public function getPrice() {
       return $this->price;
   }
-
-  public function getCategory() {
-      return $this->category;
-  } 
 
 }
