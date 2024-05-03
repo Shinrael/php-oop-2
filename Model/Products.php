@@ -21,7 +21,7 @@ class Products {
   }
 
   public function getInfo(){
-    return $this->description . ' ' . '(' . $this->icon . ')' .  ' A soli ' . $this->price . '&euro;';
+    return $this->description . ' ' . html_entity_decode($this->icon) . ' a soli ' . $this->price . '&euro;';
   }
 
 }
