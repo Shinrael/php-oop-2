@@ -6,8 +6,12 @@ require_once __DIR__ . '/Model/Categories.php';
 $dogAliments = new Products(1, 'Friskies Dog', 1.20, './img/cibocani.webp', '<i class="fa-solid fa-dog"></i>', 'Cibo per i nostri amici cani');
 $catAliments = new Products(2, 'Sheba Cat', 1.10, './img/cibogatti.webp', '<i class="fa-solid fa-cat"></i>', 'Cibo per i nostri amici gatti');
 $products = [$dogAliments, $catAliments];
+
+var_dump($products);
+
 var_dump($dogAliments);
 var_dump($catAliments);
+
 
 ?>
 

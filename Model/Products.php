@@ -1,6 +1,9 @@
 <?php
 
+require_once __DIR__ . '/Discounts.php';
+
 class Products {
+  use Discount;
 
   public $id;
   public $name;
